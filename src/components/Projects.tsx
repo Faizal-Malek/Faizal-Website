@@ -5,10 +5,6 @@ import SectionTitle from "./SectionTitle";
 import FadeIn from "./FadeIn";
 import { ExternalLink, Github } from "lucide-react";
 import { cn } from "@/lib/utils";
-import tourist_guide from "/asset/tourist-guide.png";
-import web_app from "/asset/web-app.png";
-import image_generator from "/asset/image-generator.png";
-import client_portal from "/asset/client-portal.png";
 
 interface ProjectCardProps {
   title: string;
@@ -33,8 +29,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <FadeIn delay={index * 100} direction={index % 2 === 0 ? "right" : "left"}>
       <div className="bg-white rounded-lg overflow-hidden shadow-lg border card-hover group " >
         <div className="aspect-video bg-muted relative overflow-hidden">
-          <img src={image} alt={title} className="w-full h-full object-cover" />
-          <div className="w-full h-full bg-gradient-to-br from-white/30 to-gray-100/30 absolute top-0 left-0">
+          <div className="w-full h-full bg-gradient-to-br from-white/30 to-gray-100/30">
             <div className="absolute inset-0 flex items-center justify-center text-gray-400 text-4xl font-bold opacity-20">
               {title.substring(0, 2).toUpperCase()}
             </div>
@@ -86,36 +81,36 @@ const Projects: React.FC = () => {
       title: "Tourist Guide Application",
       description:
         "A mobile app leveraging Google Maps API to provide intuitive navigation with features like landmark history and favorites.",
-      image: tourist_guide,
+      image: "/asset/tourist-guide.png",
       tags: ["Java", "Android", "Google Maps API", "Firebase"],
-      link: null,
-      repo: "https://github.com/Faizal-Malek/wil_Project/tree/main/POE_WILL",
+      link: "#",
+      repo: "#",
     },
     {
       title: "Sah Cut & Edge Website",
       description:
         "Dynamic website showcasing company products, services, and portfolio with integrated contact management system.",
-      image: web_app,
+      image: "/asset/web-app.png",
       tags: ["PHP", "JavaScript", "Firebase", "Responsive Design"],
-      repo: "https://github.com/Faizal-Malek/wil_Project/tree/main/POE_WILL",
+      link: "#",
       
     },
     {
       title: "Image Generator Tool",
       description:
         "Tool for design teams to generate and manipulate images, improving design workflows and efficiency.",
-      image: image_generator,
-      tags: ["Python"],
-      link: null,
-      repo: "https://github.com/Faizal-Malek/Generator_AI_FINAL",
+      image: "/asset/image-generator.png",
+      tags: ["Python", ],
+      link: "#",
+      repo: "#",
     },
     {
       title: "Client Management Portal",
       description:
         "Comprehensive web application for client interactions and management with user authentication and data tracking.",
-      image: client_portal,
+      image: "/asset/client-portal.png",
       tags: ["React.js", "Node.js", "Express.js", "MongoDB"],
-      link: "https://planera.co.za",
+      link: "#",
       
     },
   ];
